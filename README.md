@@ -1,62 +1,186 @@
-**PIZZA SALES ANALYSIS PROJECT**
+# 🍕 Pizza Sales Analysis Dashboard
 
-1. Preview of Projects
-2. Project Overview
+An end-to-end Business Intelligence project focused on analyzing pizza sales data to uncover revenue trends, customer ordering behavior, top-performing products, and operational insights using SQL, Excel, Power BI, and Tableau.
 
-**Preview of Projects**
+---
 
+# 📷 Preview
 
-**Project Overview**
+## Excel Dashboard
+<img width="1002" height="602" alt="Excel Dashboard" src="https://github.com/user-attachments/assets/70001849-0a8c-4285-b134-5d2e5cee61b7" />
 
-This portfolio project showcases an array of data analysis skills, including proficiency in Power BI, Tableau, SQL, and Excel. This project revolves around a comprehensive analysis of pizza sales data.
+## Power BI Dashboard
+<img width="1159" height="653" alt="Power BI Dashboard" src="https://github.com/user-attachments/assets/567278fb-cf18-420b-bd90-3e3e00458451" />
 
-**Data**
+## Sales Insights Dashboard
+<img width="1155" height="640" alt="Sales Insights Dashboard" src="https://github.com/user-attachments/assets/3ce42fc0-d576-4f35-97f9-79c1647c1034" />
 
-Pizza Sales Data 2015 (downloaded from kaggle.com)
+---
 
-**Problem Statement**
+# 📌 Project Overview
 
-The objective is to thoroughly examine crucial indicators within the pizza sales dataset to extract valuable insights into business performance. This analysis necessitates the creation of comprehensive data visualizations to provide a clear understanding of various facets of the pizza sales data, facilitating the identification and comprehension of key trends in business operations.
+The goal of this project was to analyze historical pizza sales data and transform raw transactional records into meaningful business insights that support data-driven decision-making.
 
-**Analysis:**
+The analysis focuses on identifying:
+- Revenue performance
+- Customer ordering patterns
+- Peak sales periods
+- Best & worst-selling pizzas
+- Sales contribution by category and size
+- Order behavior trends
 
-Key indicators for pizza sales data were analyzed to gain insights into business performance. Specifically, the following metrics:
+The project follows a complete analytics workflow starting from data acquisition in SQL Server to dashboard creation in Excel, Power BI, and Tableau.
 
-Total Revenue: The sum of the total price of all pizza orders was calculated.
+---
 
-• Sales by Category & Size: Demand was evaluated.
+# 🚀 Key Business Questions Solved
 
-• Average Order Value: The average amount spent per order was calculated by dividing the total revenue by the total number of orders.
+✔ Which pizza category generates the highest revenue?  
+✔ What are the peak order hours and busiest days?  
+✔ Which pizzas are top-selling and underperforming?  
+✔ How much revenue does each pizza size contribute?  
+✔ What is the average order value and average pizzas per order?  
+✔ How do monthly and weekly sales trends behave?  
 
-• Total Pizzas Sold: The sum of the quantities of all pizzas sold was determined.
+---
 
-• Total Orders: The total number of orders placed was counted.
+# 🛠 Tech Stack
 
-• Average Pizzas Per Order: The average number of pizzas sold per order was calculated by dividing the total number of pizzas sold by the total number of orders.
+| Tool | Purpose |
+|------|----------|
+| SQL Server | Data querying & KPI calculations |
+| Excel | Pivot analysis & dashboard creation |
+| Power BI | Interactive business dashboard |
+| Tableau | Data visualization |
+| DAX | Calculated measures in Power BI |
+| Power Query | Data transformation |
 
-Various aspects of pizza sales data were visualized to gain insights and understand key trends. The following requirements were identified for creating charts:
+---
 
-• Daily Trend for Total Orders: a bar chart was created to display the daily trend of total orders over a specific time period. This chart was designed to help identify patterns or fluctuations in daily order volumes.
+# 📂 Dataset
 
-• Monthly/Hourly/Weekly Trend for Total Orders: a line chart was crafted to illustrate the hourly trend of total orders throughout the day. This chart was used to identify peak hours or periods of high-order activity.
+- **Dataset:** Pizza Sales Data 2015
+- **Source:** Kaggle
+- **Data Includes:** Orders, Revenue, Pizza Categories, Sizes, Quantities, Dates & Time
 
-• Best & Worst Sellers: Percentage of Sales by Pizza Category: a pie chart was generated to display sales distribution across different pizza categories. Insights into the popularity of various pizza categories and their contribution to overall sales were provided by this chart.
+---
 
-**Project Phases**
+# 📊 KPIs Analyzed
 
-**Data Acquisition and SQL**
+| KPI | Description |
+|------|-------------|
+| Total Revenue | Total sales generated |
+| Total Orders | Number of orders placed |
+| Total Pizzas Sold | Quantity of pizzas sold |
+| Average Order Value | Revenue per order |
+| Average Pizzas per Order | Average items ordered |
+| Sales by Category | Revenue distribution by pizza category |
+| Sales by Size | Contribution by pizza size |
 
-• Acquired and managed data within an MS SQL Server.
-• Employed SQL queries to extract key metrics such as total revenue, orders, and pizza sales.
+---
 
-**Excel Dashboard** 
+# 📈 Dashboard Features
 
-• Created an interactive Excel dashboard incorporating pivot tables and visually compelling charts.
+## 📅 Sales Trend Analysis
+- Daily order trends
+- Weekly sales patterns
+- Monthly revenue growth
+- Hourly peak order analysis
 
-**Power BI Dashboard** 
+## 🍕 Product Performance
+- Best-selling pizzas
+- Worst-selling pizzas
+- Category-wise revenue contribution
+- Size-wise demand analysis
 
-• Constructed a dynamic and interactive dashboard.
-• The emphasis was on data integration and the creation of visually appealing, informative visualizations.
+## 📊 Interactive Visualizations
+- Dynamic filters
+- KPI cards
+- Pie charts
+- Bar charts
+- Trend lines
+- Comparative analysis dashboards
 
-**Conclusion:**
-This portfolio project serves as a testament to the ability to harness data effectively, transforming it into actionable insights. It showcases the technical prowess and dedication to providing invaluable solutions through data analysis.
+---
+
+# 🧠 SQL Analysis Performed
+
+### Total Revenue
+```sql
+SELECT SUM(total_price) AS Total_Revenue
+FROM pizza_sales;
+```
+
+### Total Orders
+```sql
+SELECT COUNT(DISTINCT order_id) AS Total_Orders
+FROM pizza_sales;
+```
+
+### Average Order Value
+```sql
+SELECT SUM(total_price) / COUNT(DISTINCT order_id) AS Avg_Order_Value
+FROM pizza_sales;
+```
+
+### Additional SQL Concepts Used
+- Aggregate Functions
+- GROUP BY
+- ORDER BY
+- Date Functions
+- CTEs
+- Joins
+- KPI Calculations
+
+---
+
+# 📌 Power BI Dashboard Highlights
+
+The Power BI dashboard was designed to provide business stakeholders with a clear and interactive view of sales performance.
+
+### Features:
+- Dynamic slicers
+- Interactive drill-down analysis
+- DAX measures for KPI tracking
+- Category and size filtering
+- Time-series analysis
+- Executive-level dashboard design
+
+---
+
+# 🔍 Key Insights Discovered
+
+- Peak sales occurred during weekends and evening hours.
+- Classic pizzas contributed the highest share of total sales.
+- Large-size pizzas generated the most revenue.
+- Certain pizza categories consistently underperformed, indicating opportunities for menu optimization.
+- Customer ordering behavior showed strong seasonal and hourly trends.
+
+---
+
+# 📁 Project Structure
+
+```bash
+Pizza-Sales-Analysis/
+│
+├── Dataset/
+├── SQL Queries/
+├── Excel Dashboard/
+├── Power BI Dashboard/
+├── Tableau Dashboard/
+├── Images/
+└── README.md
+```
+
+---
+
+# 🎯 Business Impact
+
+This project demonstrates how raw transactional sales data can be transformed into actionable business insights that help:
+- Improve sales strategy
+- Optimize inventory planning
+- Identify high-performing products
+- Understand customer behavior
+- Support data-driven decision-making
+
+---
